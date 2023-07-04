@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: mcfive;
+    src: url("/assets/fonts/mcfive.ttf");
+}
+
+@font-face {
+    font-family: mcten;
+    src: url("/assets/fonts/mcten.ttf");
+}
+
+@font-face {
+    font-family: mcseven;
+    src: url("/assets/fonts/mcseven.ttf");
+}
