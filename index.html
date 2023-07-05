@@ -6,34 +6,53 @@
 	<title>Grid Calculator</title>
 </head>
 <body>
-	<div class="toast toast-center hidden text-center font-mcfive font-bold">
-		<div class="alert alert-warning rounded-none">
-			<span>Your text is very long!</span>
-		</div>
-	</div>
 	<div class="h-screen flex flex-col gap-16 justify-center items-center">
-		<div id="caret" class="hidden"></div>
-		<div class="flex flex-col gap-3 pointer-events-none">
+		<div class="flex flex-col gap-3">
 			<div class="flex flex-row justify-center gap-4 items-center opacity-50">
-				<img src="/assets/illustrator.png" class="w-9 rounded-md"></img>
+				<img src="/assets/illustrator.png" class="w-9 rounded-md" />
 				<p class="text-xl md:text-3xl mb-1 uppercase font-bold font-mcfive tracking-wider">Illustrator Only</p>
 			</div>
 			<img src="/assets/grid_calculator.svg" class="w-[40rem]">
 		</div>
 		<div class="flex flex-col justify-center items-center">
 			<p class="text-2xl md:text-3xl text-center font-mcseven">Input your logo's text to see the correct grid width</p>
-			<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" class="font-mcseven tracking-wide text-xl input rounded-none bg-base-200 input-lg mt-5 w-96 md:w-full shadow-dropandhighlight focus:outline-none border-none" />
-			<select class=" font-mcseven tracking-wide text-xl select rounded-none bg-base-200 select-lg mb-16 mt-4 w-96 md:w-full shadow-dropandhighlight focus:outline-none border-none">
-				<option disabled selected>What font are you using?</option>
-				<option>Minecraft Ten</option>
-				<option>Minecraft Five</option>
-				<option>Minecraft Five Bold</option>
-				<option>MC Ten</option>
-				<option>i have undersized genitalia</option>
-			</select>
-			<div class="md:tooltip md:tooltip-bottom" data-tip="Width">
-				<span id="total" class="countdown p-5 bg-[#3B8526] text-white shadow-dropandhighlight2 font-bold text-4xl font-mcfive rounded-none border-none">0</span>
-			</div>
+			<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" class="font-mcseven tracking-wide text-xl input relative rounded-none bg-base-200 input-lg mt-5 w-96 md:w-full highlight focus:outline-none border-none" />
+			<button class="bg-[#3B8526] text-white btn font-mcseven tracking-wide text-xl rounded-none btn-lg mb-16 mt-4 w-96 md:w-full relative highlight focus:outline-none border-none grayscale normal-case" onclick="selectionmodal.showModal()">What font are you using?</button>
+			<dialog id="selectionmodal" class="modal modal-bottom sm:modal-middle">
+				<form method="dialog" class="modal-box">
+					<h3 class="font-bold text-xl text-white font-mcseven tracking-wide pb-5">Choose font category</h3>
+					<div class="grid grid-cols-2 gap-5">
+						<div onclick="minecraft.showModal()" class="card image-full w-50">
+							<figure><img src="/assets/previews/minecraft/banner.png"></figure>
+							<div class="card-body justify-center items-center">
+								<h1 class="font-bold font-mcseven text-xl pointer-events-none">Minecraft Fonts</h1>
+							</div>
+						</div>
+						<div onclick="patred.showModal()" class="card image-full w-50">
+							<figure><img src="/assets/previews/patred/banner.png"></figure>
+							<div class="card-body justify-center items-center">
+								<h1 class="font-bold font-mcseven text-xl pointer-events-none">Patred's Fonts</h1>
+							</div>
+						</div>
+						<div onclick="sinmedia.showModal()" class="card image-full w-50">
+							<figure><img src="/assets/previews/sinmedia/banner.png"></figure>
+							<div class="card-body justify-center items-center">
+								<h1 class="font-bold font-mcseven text-xl pointer-events-none">SinMedia's Fonts</h1>
+							</div>
+						</div>
+						<div onclick="oliver.showModal()" class="card image-full w-50">
+							<figure><img src="/assets/previews/oliver/banner.png"></figure>
+							<div class="card-body justify-center items-center">
+								<h1 class="font-bold font-mcseven text-xl pointer-events-none">Oliver's Fonts</h1>
+							</div>
+						</div>
+					</div>
+					<div class="modal-action">
+						<button class="btn rounded-none font-mcfive tracking-wider highlight relative focus:outline-none border-none">Close</button>
+					</div>
+				</form>
+			</dialog>
+			<span id="total" class="countdown p-5 bg-[#3B8526] text-white highlight relative font-bold text-4xl font-mcfive rounded-none border-none">0</span>
 		</div>
 		<span class="font-mcseven opacity-50 text-center">This site was poorly built by <a href="https://theannoying.dev" target="_blank" class="underline">TheAnnoying</a> and a few <a href="https://discord.gg/titles" target="_blank" class="underline">others</a></span>
 	</div>
