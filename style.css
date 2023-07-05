@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* MINECRAFT FONTS */
+
 @font-face {
     font-family: mcfive;
     src: url("/assets/fonts/mcfive.ttf");
@@ -15,6 +17,103 @@
 @font-face {
     font-family: mcseven;
     src: url("/assets/fonts/mcseven.ttf");
+}
+
+/* PATRED FONTS */
+
+@font-face {
+    font-family: patred-dungeons;
+    src: url("/assets/fonts/patred/dungeons.ttf");
+}
+
+@font-face {
+    font-family: patred-dungeonsaltlowercase;
+    src: url("/assets/fonts/patred/dungeons-alt-lowercase.ttf");
+}
+
+@font-face {
+    font-family: patred-dungeonsv2;
+    src: url("/assets/fonts/patred/dungeons-v2.ttf");
+}
+
+@font-face {
+    font-family: patred-dungeonsv2altlw;
+    src: url("/assets/fonts/patred/dungeons-v2-altlw.ttf");
+}
+
+@font-face {
+    font-family: patred-legendary;
+    src: url("/assets/fonts/patred/legendary.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenaltlowercase;
+    src: url("/assets/fonts/patred/mctenaltlowercase.ttf");
+}
+
+@font-face {
+    font-family: patred-mctendrip;
+    src: url("/assets/fonts/patred/mctendrip.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenelongatedalt;
+    src: url("/assets/fonts/patred/mctenelongatedalt.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenextend;
+    src: url("/assets/fonts/patred/mctenextend.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenicons;
+    src: url("/assets/fonts/patred/mctenicons.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenlowercasealt;
+    src: url("/assets/fonts/patred/mctenlowercasealt.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenoutline;
+    src: url("/assets/fonts/patred/mctenoutline.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenround;
+    src: url("/assets/fonts/patred/mctenround.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenrounddrip;
+    src: url("/assets/fonts/patred/mctenrounddrip.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenserif;
+    src: url("/assets/fonts/patred/mctenserif.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenshifted;
+    src: url("/assets/fonts/patred/mctenshifted.ttf");
+}
+
+@font-face {
+    font-family: patred-mctenzigzag;
+    src: url("/assets/fonts/patred/mctenzigzag.ttf");
+}
+
+@font-face {
+    font-family: patred-minecrafttenlowercase;
+    src: url("/assets/fonts/patred/minecrafttenlowercase.ttf");
+}
+
+@font-face {
+    font-family: patred-minecrafttenserif;
+    src: url("/assets/fonts/patred/minecrafttenserif.ttf");
 }
 
 .card.image-full:before {
@@ -37,5 +136,18 @@
     top: 0;
     background-color: #FFF;
     mix-blend-mode: overlay;
-    opacity: 0.4;
+    opacity: 0.5;
+}
+
+.font-select {
+    text-shadow: 0 5px 0px black;
+}
+
+@keyframes popFromTop {
+    0% {
+        transform: translateY(-4rem);
+    }
+    100% {
+        transform: translateY();
+    }
 }
