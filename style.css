@@ -16,3 +16,26 @@
     font-family: mcseven;
     src: url("/assets/fonts/mcseven.ttf");
 }
+
+.card.image-full:before {
+    opacity: 0.4;
+}
+
+.highlight {
+    box-shadow: 0px 4px 0px 0px #00000080;
+}
+
+.highlight::before, div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.highlight::before {
+    top: 0;
+    background-color: #FFF;
+    mix-blend-mode: overlay;
+    opacity: 0.4;
+}
