@@ -8,10 +8,6 @@ export default {
 				"mcten": ["mcten", "sans-serif"],
 				"mcseven": ["mcseven", "sans-serif"]
 			},
-			boxShadow: {
-				"dropandhighlight": "0px 4px 0px 0px #00000070, inset 0px 4px 0px 0px #4b5263",
-				"dropandhighlight2": "inset #61bc47 0 4px,#00000080 0 4px;"
-			}
 		}
 	},
 	daisyui: {
