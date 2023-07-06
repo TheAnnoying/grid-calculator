@@ -4,12 +4,10 @@ const input = document.getElementById("input");
 const fontChoiceButton = document.getElementById("font-choose");
 const totalElement = document.getElementById("total");
 
-const widths = await fetch("/widths.json").then(e => e.json());
-console.log(widths)
+const widths = fetch("/widths.json").then(e => e.json());
+const fonts = fetch("/assets/fonts.json").then(e => e.json());
 
-const fonts = await fetch("/assets/fonts.json").then(e => e.json());
 const loadedFonts = new Set;
-
 let selectedCategory = fonts[0].id;
 let selectedFont = fonts[0].fonts[0][0];
 
