@@ -10,6 +10,9 @@ export default {
 			},
 			animation: {
 				"popin": "popFromTop forwards 0.3s",
+			},
+			colors: {
+				"green-bg": "var(--green-bg)"
 			}
 		}
 	},
