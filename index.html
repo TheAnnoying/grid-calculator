@@ -4,113 +4,23 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Grid Calculator</title>
+	<style></style>
 </head>
 <body>
-	<div class="h-screen flex flex-col gap-16 justify-center items-center">
-		<div id="selected" class="absolute top-0 bg-lime-600 p-2 highlight animate-popin font-mcseven text-xl">
-			None
-		</div>
-		<div class="flex flex-col gap-3">
-			<div class="flex flex-row justify-center gap-4 items-center opacity-50">
-				<img src="/assets/illustrator.png" class="w-9 rounded-md" />
-				<p class="text-xl md:text-3xl mb-1 uppercase font-bold font-mcfive tracking-wider">Illustrator Only</p>
+	<div id="parent">
+		<div id="title">
+			<div>
+				<img loading="lazy" src="/assets/illustrator.png" class="w-9 rounded-md" />
+				<p id="illustratorTitle">Illustrator Only</p>
 			</div>
-			<img src="/assets/grid_calculator.svg" class="w-[40rem]">
+			<img loading="lazy" src="/assets/grid_calculator.svg" class="w-[40rem]">
 		</div>
 		<div class="flex flex-col justify-center items-center">
 			<p class="text-2xl md:text-3xl text-center font-mcseven">Input your logo's text to see the correct grid width</p>
 			<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" class="font-mcseven tracking-wide text-xl input relative rounded-none bg-base-200 input-lg mt-5 w-96 md:w-full highlight focus:outline-none border-none" />
-			<button class="bg-[#3B8526] text-white btn font-mcseven tracking-wide text-xl rounded-none btn-lg mb-16 mt-4 w-96 md:w-full relative highlight focus:outline-none border-none grayscale normal-case" onclick="selectionmodal.showModal()">What font are you using?</button>
-			<dialog id="selectionmodal" class="modal modal-bottom sm:modal-middle">
-				<form method="dialog" class="modal-box">
-					<h3 class="font-bold text-xl text-white font-mcseven tracking-wide pb-5">Choose font category</h3>
-					<div class="grid grid-cols-2 gap-5">
-						<div onclick="minecraft.showModal(); selectionmodal.close();" class="hover:scale-105 duration-150 card image-full w-50">
-							<figure><img src="/assets/previews/minecraft/banner.png"></figure>
-							<div class="card-body justify-center items-center">
-								<h1 class="font-bold font-mcseven text-md md:text-xl pointer-events-none text-gray-200">Minecraft Fonts</h1>
-							</div>
-						</div>
-						<div onclick="patred.showModal(); selectionmodal.close();" class="hover:scale-105 duration-150 card image-full w-50">
-							<figure><img src="/assets/previews/patred/banner.png"></figure>
-							<div class="card-body justify-center items-center">
-								<h1 class="font-bold font-mcseven text-md md:text-xl pointer-events-none text-gray-200">Patred's Fonts</h1>
-							</div>
-						</div>
-						<div onclick="sinmedia.showModal(); selectionmodal.close();" class="hover:scale-105 duration-150 card image-full w-50">
-							<figure><img src="/assets/previews/sinmedia/banner.png"></figure>
-							<div class="card-body justify-center items-center">
-								<h1 class="font-bold font-mcseven text-md md:text-xl pointer-events-none text-gray-200">SinMedia's Fonts</h1>
-							</div>
-						</div>
-						<div onclick="oliver.showModal(); selectionmodal.close();" class="hover:scale-105 duration-150 card image-full w-50">
-							<figure><img src="/assets/previews/oliver/banner.png"></figure>
-							<div class="card-body justify-center items-center">
-								<h1 class="font-bold font-mcseven text-md md:text-xl pointer-events-none text-gray-200">Oliver's Fonts</h1>
-							</div>
-						</div>
-						<div onclick="floiden.showModal(); selectionmodal.close();" class="hover:scale-105 duration-150 card image-full w-50">
-							<figure><img src="/assets/previews/floiden/banner.png"></figure>
-							<div class="card-body justify-center items-center">
-								<h1 class="font-bold font-mcseven text-md md:text-xl pointer-events-none text-gray-200">Floiden's Fonts</h1>
-							</div>
-						</div>
-						<div class="card w-50 bg-base-200">
-							<div class="card-body justify-center items-center">
-								<h1 class="font-bold font-mcseven text-md md:text-xl pointer-events-none text-gray-200">???</h1>
-							</div>
-						</div>
-					</div>
-					<div class="modal-action">
-						<button class="btn rounded-none font-mcfive tracking-widest highlight relative focus:outline-none border-none">Close</button>
-					</div>
-				</form>
-			</dialog>
-			<dialog id="minecraft" class="modal modal-bottom sm:modal-middle">
-				<form method="dialog" class="modal-box">
-					<h3 class="font-bold text-xl text-white font-mcseven tracking-wide pb-5">Choose font</h3>
-					<div class="text-white grid grid-cols-2 place-items-center font-select cursor-pointer">
-						<p font="Minecraft Ten" class="font-choice font-mcten text-6xl tracking-tight m-3 p-3 duration-75">aBC</p>
-						<p font="Minecraft Seven" class="font-choice font-mcseven text-6xl tracking-tight m-3 p-3 duration-75">ABC</p>
-						<p font="Minecraft Five" class="font-choice font-mcfive text-5xl tracking-tight m-3 p-3 duration-75">ABC</p>
-						<p font="Minecraft Five Bold" class="font-choice font-bold font-mcfive text-5xl m-3 p-3 duration-75">ABC</p>
-					</div>
-					<div class="modal-action gap-2">
-						<button onclick="selectionmodal.showModal();" class="font-mcseven text-xl mb-2 text-gray-400 underline">Back</button>
-						<button class="btn rounded-none font-mcfive tracking-widest highlight relative focus:outline-none border-none bg-[#3B8526] text-white">Select</button>
-					</div>
-				</form>
-			</dialog>
-			<dialog id="patred" class="modal modal-bottom sm:modal-middle">
-				<form method="dialog" class="modal-box">
-					<h3 class="font-bold text-xl text-white font-mcseven tracking-wide pb-5">Choose font</h3>
-					<div class="text-white grid grid-cols-2 place-items-center font-select cursor-pointer">
-						<p font="Patred: Dungeons" style="font-family: patred-dungeons" class="font-choice text-6xl tracking-tight m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: Dungeons Alt Lowercase" style="font-family: patred-dungeonsaltlowercase" class="font-choice text-6xl tracking-tight m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: Dungeons v2" style="font-family: patred-dungeonsv2" class="font-choice text-6xl tracking-tight m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: Dungeons v2 AltLw" style="font-family: patred-dungeonsv2altlw" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: Legendary" style="font-family: patred-legendary" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Alt Lowercase" style="font-family: patred-mctenaltlowercase" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Drip" style="font-family: patred-mctendrip" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Elongated Alt" style="font-family: patred-mctenelongatedalt" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Extend" style="font-family: patred-mctenextend" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Icons" style="font-family: patred-mctenicons" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Lowercase Alt" style="font-family: patred-mctenlowercasealt" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Outline" style="font-family: patred-mctenoutline" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Round Drip" style="font-family: patred-mctenrounddrip" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Serif" style="font-family: patred-mctenserif" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten Shifted" style="font-family: patred-mctenshifted" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: MC Ten ZigZag" style="font-family: patred-mctenzigzag" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: Minecraft Ten Lowercase" style="font-family: patred-minecrafttenlowercase" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-						<p font="Patred: Minecraft Ten Serif" style="font-family: patred-minecrafttenserif" class="font-choice font-mcfive text-6xl m-3 p-3 duration-75">ABC</p>
-					</div>
-					<div class="modal-action gap-2">
-						<button onclick="selectionmodal.showModal();" class="font-mcseven text-xl mb-2 text-gray-400 underline">Back</button>
-						<button class="btn rounded-none font-mcfive tracking-widest highlight relative focus:outline-none border-none bg-[#3B8526] text-white">Select</button>
-					</div>
-				</form>
-			</dialog>
-			<span id="total" class="countdown p-5 bg-[#3B8526] text-white highlight relative font-bold text-4xl font-mcfive rounded-none border-none">0</span>
+			<button id="font-choose" class="bg-green-bg text-white btn font-mcseven tracking-wide text-xl rounded-none btn-lg mb-16 mt-4 w-96 md:w-full relative highlight focus:outline-none border-none grayscale normal-case">What font are you using?</button>
+
+			<span id="total" class="select-none p-5 bg-green-bg text-white highlight relative font-bold text-4xl font-mcfive rounded-none border-none">0</span>
 		</div>
 		<span class="font-mcseven opacity-50 text-center">This site was poorly built by <a href="https://theannoying.dev" target="_blank" class="underline">TheAnnoying</a> and a few <a href="https://discord.gg/titles" target="_blank" class="underline">others</a></span>
 	</div>
