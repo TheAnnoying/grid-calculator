@@ -1,0 +1,34 @@
+[
+    {
+        "id": "minecraft",
+        "name": "Minecraft",
+        "fonts": [
+            [
+                "ten",
+                "Minecraft Ten"
+            ],
+            [
+                "seven",
+                "Minecraft Seven"
+            ],
+            [
+                "five",
+                "Minecraft Five"
+            ]
+        ]
+    },
+    {
+        "id": "patred",
+        "name": "Patred",
+        "fonts": [
+            [
+                "dungeons",
+                "Dungeons"
+            ],
+            [
+                "legendary",
+                "Legendary"
+            ]
+        ]
+    }
+]
