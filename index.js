@@ -4,7 +4,7 @@ const input = document.getElementById("input");
 const fontChoiceButton = document.getElementById("font-choose");
 const totalElement = document.getElementById("total");
 
-const widths = fetch("/widths.json").then(e => e.json());
+const widths = fetch("/assets/widths.json").then(e => e.json());
 const fonts = fetch("/assets/fonts.json").then(e => e.json());
 
 const loadedFonts = new Set;
