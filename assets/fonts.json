@@ -14,6 +14,10 @@
             [
                 "five",
                 "Minecraft Five"
+            ],
+            [
+                "fivebold",
+                "Minecraft Five Bold"
             ]
         ]
     },
@@ -26,8 +30,160 @@
                 "Dungeons"
             ],
             [
+                "dungeons-alt-lowercase",
+                "Dungeons Alt Lowercase"
+            ],
+            [
+                "dungeons-v2",
+                "Dungeons v2"
+            ],
+            [
+                "dungeons-v2-altlw",
+                "Dungeons v2 AltLw"
+            ],
+            [
                 "legendary",
                 "Legendary"
+            ],
+            [
+                "mctenaltlowercase",
+                "MC Ten Alt Lowercase"
+            ],
+            [
+                "mctendrip",
+                "MC Ten Drip"
+            ],
+            [
+                "mctenelongatedalt",
+                "MC Ten Elongated Alt"
+            ],
+            [
+                "mctenextend",
+                "MC Ten Extend"
+            ],
+            [
+                "mctenicons",
+                "MC Ten Icons"
+            ],
+            [
+                "mctenlowercasealt",
+                "MC Ten Lowercase Alt"
+            ],
+            [
+                "mctenoutline",
+                "MC Ten Outline"
+            ],
+            [
+                "mctenround",
+                "MC Ten Round"
+            ],
+            [
+                "mctenrounddrip",
+                "MC Ten Round Drip"
+            ],
+            [
+                "mctenserif",
+                "MC Ten Serif"
+            ],
+            [
+                "mctenshifted",
+                "MC Ten Shifted"
+            ],
+            [
+                "mctenzigzag",
+                "MC Ten ZigZag"
+            ],
+            [
+                "minecrafttenlowercase",
+                "Minecraft Ten Lowercase"
+            ],
+            [
+                "minecrafttenserif",
+                "Minecraft Ten Serif"
+            ]
+        ]
+    },
+    {
+        "id": "oliver",
+        "name": "oliver.mp3",
+        "fonts": [
+            [
+                "eight",
+                "Eight"
+            ],
+            [
+                "hideaway-gui",
+                "Hideaway GUI"
+            ],
+            [
+                "mc-ten-elongated-fix",
+                "MC Ten Elongated Fix"
+            ],
+            [
+                "mc-ten-elongated-middle",
+                "MC Ten Elongated Middle"
+            ],
+            [
+                "mc-ten-elongated-reverse",
+                "MC Ten Elongated Reverse"
+            ],
+            [
+                "minecraft-ten-round",
+                "Minecraft Ten Round"
+            ],
+            [
+                "mojang-pixel",
+                "Mojang Pixel"
+            ],
+            [
+                "nine",
+                "Nine"
+            ],
+            [
+                "seven",
+                "Seven"
+            ],
+            [
+                "seven-round",
+                "Seven Round"
+            ]
+        ]
+    },
+    {
+        "id": "floiden",
+        "name": "FloideN",
+        "fonts": [
+            [
+                "mc-eleven",
+                "MC Eleven"
+            ],
+            [
+                "mc-nine",
+                "MC Nine"
+            ],
+            [
+                "mc-ten-alt",
+                "MC Ten Alt"
+            ],
+            [
+                "mc-ten-fire",
+                "MC Ten Fire"
+            ],
+            [
+                "mc-terra",
+                "MC Terra"
+            ],
+            [
+                "minecraft-bold-ten",
+                "Minecraft Bold Ten"
+            ],
+            [
+                "minecraft-thick-ten",
+                "Minecraft Thick Ten"
+            ],
+            [
+                "modified-mc-ten-drip",
+                "Modified MC Ten Drip"
             ]
         ]
     }
