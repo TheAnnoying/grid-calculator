@@ -59,7 +59,7 @@ fontChoiceButton.addEventListener("click", (e) => {
 	`<div class="grid grid-cols-2 gap-5">
 	${fonts.map(e =>
 		`<div class="font-card card image-full" data-category="${e.id}">
-			<figure><img loading="lazy" src="/previews/${e.id}/banner.png"></figure>
+			<figure><img loading="lazy" src="/fonts/${e.id}/banner.png"></figure>
 			<div class="card-body justify-center items-center">
 				<h1 class="font-card-title">${e.name}</h1>
 			</div>
