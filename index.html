@@ -4,6 +4,13 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Grid Calculator</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+
+	<meta content="Grid Calculator" property="og:title" />
+	<meta content="Calculate the correct grid size for your Minecraft styled Illustrator logos" property="og:description" />
+	<meta content="https://grid-calculator.theannoying.dev/favicon.png" property="og:image" />
+	<meta content="#33ccff" data-react-helmet="true" name="theme-color" />
+
 	<style></style>
 </head>
 <body>
@@ -19,13 +26,29 @@
 			</div>
 			<img loading="lazy" src="/grid_calculator.svg" class="w-[40rem]">
 		</div>
-		<div class="flex flex-col justify-center items-center">
+		<div class="center-col">
 			<p class="text-2xl md:text-3xl text-center font-mcseven">Input your logo's text to see the correct grid width</p>
-			<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" class="font-mcseven tracking-wide text-xl input relative rounded-none bg-base-200 input-lg mt-5 w-96 md:w-full highlight focus:outline-none border-none" />
-			<button id="font-choose" class="bg-green-bg text-white btn font-mcseven tracking-wide text-xl rounded-none btn-lg mb-16 mt-4 w-96 md:w-full relative highlight focus:outline-none border-none grayscale normal-case">What font are you using?</button>
+			<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" class="highlight font-mcseven tracking-wide text-xl input rounded-none bg-base-200 input-lg mt-5 w-96 md:w-full focus:outline-4 focus:outline-gray-400 border-none" />
+			<button id="font-choose" class="bg-green-bg text-white btn font-mcseven tracking-wide text-xl rounded-none btn-lg mt-4 w-96 md:w-full relative highlight focus:outline-none border-none grayscale normal-case">What font are you using?</button>
+
+			<div class="center-row gap-5 mb-16 mt-5 font-mcfive select-none">
+				<p class="grid-size center-row size-selected">
+					<span class="text-2xl">x</span>
+					<span class="text-4xl">1</span>
+				</p>
+				<p class="grid-size center-row">
+					<span class="text-2xl">x</span>
+					<span class="text-4xl">3</span>
+				</p>
+				<p class="grid-size center-row">
+					<span class="text-2xl">x</span>
+					<span class="text-4xl">6</span>
+				</p>
+			</div>
 
 			<span id="total" class="select-none p-5 bg-green-bg text-white highlight relative font-bold text-4xl font-mcfive rounded-none border-none">0</span>
 		</div>
+
 		<span class="font-mcseven opacity-50 text-center">This site was poorly built by <a href="https://theannoying.dev" target="_blank" class="underline">TheAnnoying</a> and a few <a href="https://discord.gg/titles" target="_blank" class="underline">others</a></span>
 	</div>
 	<script type="module" src="/index.js"></script>
