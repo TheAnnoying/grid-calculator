@@ -8,9 +8,6 @@ export default {
 				"mcten": ["mcten", "sans-serif"],
 				"mcseven": ["mcseven", "sans-serif"]
 			},
-			animation: {
-				"popin": "popFromTop forwards 0.3s",
-			},
 			colors: {
 				"green-bg": "var(--green-bg)"
 			}
