@@ -17,14 +17,22 @@ const loadedFonts = new Set;
 let selectedCategory = fonts[0].id;
 let selectedFont = fonts[0].fonts[0][0];
 
+function isUpperCase(letter) {
+	if(typeof letter !== "string" || letter.length !== 1) throw new Error("The parameter needs to be a one letter string");
+
+	return (letter.toUpperCase() === letter ? true : false);
+}
+
 function updateWidth() {
-	input.value = input.value.replace(/[^a-zA-Z]+/g, "").toLowerCase();
+	input.value = input.value.replace(/[^a-zA-Z]+/g, "");
 
 	let total = 0;
 	let spaces = 0;
 
 	input.value.split("").forEach(letter => {
-		total += widths[selectedCategory][selectedFont][letter.toLowerCase()];
+		isUpperCase(letter)
+			? total += widths[selectedCategory ?? "minecraft"][selectedFont ?? "ten"][letter.toLowerCase()][1]
+			: total += widths[selectedCategory ?? "minecraft"][selectedFont ?? "ten"][letter.toLowerCase()][0]
 	});
 
 	[1, 0].includes(input.value.length) ? null : spaces += (input.value.length - 1);
