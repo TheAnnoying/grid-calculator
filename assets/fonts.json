@@ -5,19 +5,23 @@
         "fonts": [
             [
                 "ten",
-                "Minecraft Ten"
+                "Minecraft Ten",
+                "3.75"
             ],
             [
                 "seven",
-                "Minecraft Seven"
+                "Minecraft Seven",
+                "3.75"
             ],
             [
                 "five",
-                "Minecraft Five"
+                "Minecraft Five",
+                "3.75"
             ],
             [
                 "fivebold",
-                "Minecraft Five Bold"
+                "Minecraft Five Bold",
+                "3.75"
             ]
         ]
     },
@@ -27,79 +31,98 @@
         "fonts": [
             [
                 "dungeons",
-                "Dungeons"
+                "Dungeons",
+                "5"
             ],
             [
                 "dungeons-alt-lowercase",
-                "Dungeons Alt Lowercase"
+                "Dungeons Alt Lowercase",
+                "3.75"
             ],
             [
                 "dungeons-v2",
-                "Dungeons v2"
+                "Dungeons v2",
+                "3.75"
             ],
             [
                 "dungeons-v2-altlw",
-                "Dungeons v2 AltLw"
+                "Dungeons v2 AltLw",
+                "3.75"
             ],
             [
                 "legendary",
-                "Legendary"
+                "Legendary",
+                "4.5"
             ],
             [
                 "mctenaltlowercase",
-                "MC Ten Alt Lowercase"
+                "MC Ten Alt Lowercase",
+                "4"
             ],
             [
                 "mctendrip",
-                "MC Ten Drip"
+                "MC Ten Drip",
+                "5"
             ],
             [
                 "mctenelongatedalt",
-                "MC Ten Elongated Alt"
+                "MC Ten Elongated Alt",
+                "5"
             ],
             [
                 "mctenextend",
-                "MC Ten Extend"
+                "MC Ten Extend",
+                "3.75"
             ],
             [
                 "mctenicons",
-                "MC Ten Icons"
+                "MC Ten Icons",
+                "4"
             ],
             [
                 "mctenlowercasealt",
-                "MC Ten Lowercase Alt"
+                "MC Ten Lowercase Alt",
+                "5"
             ],
             [
                 "mctenoutline",
-                "MC Ten Outline"
+                "MC Ten Outline",
+                "6"
             ],
             [
                 "mctenround",
-                "MC Ten Round"
+                "MC Ten Round",
+                "5"
             ],
             [
                 "mctenrounddrip",
-                "MC Ten Round Drip"
+                "MC Ten Round Drip",
+                "5.4"
             ],
             [
                 "mctenserif",
-                "MC Ten Serif"
+                "MC Ten Serif",
+                "5"
             ],
             [
                 "mctenshifted",
-                "MC Ten Shifted"
+                "MC Ten Shifted",
+                "5.3"
             ],
             [
                 "mctenzigzag",
-                "MC Ten ZigZag"
+                "MC Ten ZigZag",
+                "5.4"
             ],
             [
                 "minecrafttenlowercase",
-                "Minecraft Ten Lowercase"
+                "Minecraft Ten Lowercase",
+                "5"
             ],
             [
                 "minecrafttenserif",
-                "Minecraft Ten Serif"
+                "Minecraft Ten Serif",
+                "4"
             ]
         ]
     },
@@ -109,43 +132,53 @@
         "fonts": [
             [
                 "eight",
-                "Eight"
+                "Eight",
+                "3"
             ],
             [
                 "hideaway-gui",
-                "Hideaway GUI"
+                "Hideaway GUI",
+                "3"
             ],
             [
                 "mc-ten-elongated-fix",
-                "MC Ten Elongated Fix"
+                "MC Ten Elongated Fix",
+                "3.5"
             ],
             [
                 "mc-ten-elongated-middle",
-                "MC Ten Elongated Middle"
+                "MC Ten Elongated Middle",
+                "3"
             ],
             [
                 "mc-ten-elongated-reverse",
-                "MC Ten Elongated Reverse"
+                "MC Ten Elongated Reverse",
+                "3"
             ],
             [
                 "minecraft-ten-round",
-                "Minecraft Ten Round"
+                "Minecraft Ten Round",
+                "4.5"
             ],
             [
                 "mojang-pixel",
-                "Mojang Pixel"
+                "Mojang Pixel",
+                "3"
             ],
             [
                 "nine",
-                "Nine"
+                "Nine",
+                "3"
             ],
             [
                 "seven",
-                "Seven"
+                "Seven",
+                "3"
             ],
             [
                 "seven-round",
-                "Seven Round"
+                "Seven Round",
+                "3"
             ]
         ]
     },

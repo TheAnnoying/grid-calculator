@@ -90,9 +90,9 @@ fontChoiceButton.addEventListener("click", (e) => {
 				dialog.close();
 
 				showModal("Choose font", `
-					<div class="text-white grid grid-cols-2 place-items-center font-select cursor-pointer">${category.fonts.map(e => `
+					<div class="text-white gap-4 grid grid-cols-2 place-items-center font-select cursor-pointer">${category.fonts.map(e => `
 						<div class="font${selectedCategory === category.id && selectedFont === e[0] ? " selected" : ""}" data-font="${e[0]}">
-							<div style="font-family:${category.id}-${e[0]};" class="text-6xl">ABC</div>
+							<div style="font-family:${category.id}-${e[0]}; font-size: ${e[2] + "rem" ?? "4rem"};">ABC</div>
 						</div>
 					`).join("")}</div>
 					<div class="modal-action gap-3">
