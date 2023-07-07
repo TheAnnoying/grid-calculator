@@ -4,6 +4,7 @@
 
 :root {
     --green-bg: #3B8526;
+    color-scheme: dark;
 }
 
 @font-face {
