@@ -7,6 +7,20 @@
     color-scheme: dark;
 }
 
+.center-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @font-face {
     font-family: mcfive;
     src: url("/fonts/minecraft/five.ttf");
@@ -108,7 +122,7 @@
     @apply text-gray-200;
 }
 
-.selected {
+.font-selected {
     outline: 4px solid var(--green-bg);
 }
 
@@ -124,4 +138,18 @@
 
 .font:hover {
     outline: 4px solid white;
+}
+
+.grid-size {
+    color: white;
+    @apply duration-75;
+    @apply p-2;
+    text-align: center;
+    width: 70px;
+    height: 50px;
+    text-shadow: 0 5px 0 #00000080;
+}
+
+.size-selected {
+    outline: 4px solid white;;
 }

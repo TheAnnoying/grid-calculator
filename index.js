@@ -7,6 +7,9 @@ const input = document.getElementById("input");
 const fontChoiceButton = document.getElementById("font-choose");
 const totalElement = document.getElementById("total");
 
+const gridSizes = [...document.getElementsByClassName("grid-size")];
+let selectedGridSize = gridSizes[0].children[1].innerText;
+
 const widths = await fetch("/widths.json").then(e => e.json());
 const fonts = await fetch("/fonts.json").then(e => e.json());	
 
@@ -26,7 +29,7 @@ function updateWidth() {
 
 	[1, 0].includes(input.value.length) ? null : spaces += (input.value.length - 1);
 
-	totalElement.innerText = (total == 0 && spaces == 0) ? "0" : (total + spaces - 1).toString();
+	totalElement.innerText = (total == 0 && spaces == 0) ? "0" : ((total + spaces)*parseInt(selectedGridSize) - 1).toString();
 }
 
 input.addEventListener("input", updateWidth);
@@ -114,8 +117,8 @@ fontChoiceButton.addEventListener("click", (e) => {
 						selectedCategory = category.id;
 						selectedFont = font[0];
 
-						document.querySelectorAll(".selected").forEach(e => e.classList.remove("selected"))
-						evt.currentTarget.classList.add("selected");
+						document.querySelectorAll(".font-selected").forEach(e => e.classList.remove("font-selected"))
+						evt.currentTarget.classList.add("font-selected");
 
 						fontChoiceButton.innerText = `Selected Font: ${category.name} - ${font[1]}`;
 						updateWidth();
@@ -124,4 +127,15 @@ fontChoiceButton.addEventListener("click", (e) => {
 			}));
 		}
 	)
+});
+
+gridSizes.forEach(option => {
+	option.addEventListener("click", e => {
+		gridSizes.forEach(element => element.classList.remove("size-selected"));
+
+		option.classList.add("size-selected");
+
+		selectedGridSize = option.children[1].innerText;
+		updateWidth();
+	});
 });
