@@ -104,7 +104,8 @@
 
 .font-card {
     @apply duration-150;
-    @apply w-52;
+    @apply w-40;
+    @apply md:w-52;
 }
 
 .font-card:hover {
@@ -125,8 +126,9 @@
 
 .font {
     @apply duration-100;
-    @apply m-2;
-    @apply p-3;
+    padding: 5px 10px 10px;
+    width: 200px;
+    text-align: center;
 }
 
 .font:hover {
