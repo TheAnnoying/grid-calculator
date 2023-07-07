@@ -1,11 +1,14 @@
 import "./style.css";
 
+//If javascript was not loaded, the site won't load
+document.getElementById("parent").style.setProperty("display", "flex")
+
 const input = document.getElementById("input");
 const fontChoiceButton = document.getElementById("font-choose");
 const totalElement = document.getElementById("total");
 
-const widths = fetch("/assets/widths.json").then(e => e.json());
-const fonts = fetch("/assets/fonts.json").then(e => e.json());
+const widths = await fetch("/widths.json").then(e => e.json());
+const fonts = await fetch("/fonts.json").then(e => e.json());	
 
 const loadedFonts = new Set;
 let selectedCategory = fonts[0].id;
@@ -56,7 +59,7 @@ fontChoiceButton.addEventListener("click", (e) => {
 	`<div class="grid grid-cols-2 gap-5">
 	${fonts.map(e =>
 		`<div class="font-card card image-full" data-category="${e.id}">
-			<figure><img loading="lazy" src="/assets/previews/${e.id}/banner.png"></figure>
+			<figure><img loading="lazy" src="/previews/${e.id}/banner.png"></figure>
 			<div class="card-body justify-center items-center">
 				<h1 class="font-card-title">${e.name}</h1>
 			</div>
@@ -76,7 +79,7 @@ fontChoiceButton.addEventListener("click", (e) => {
 					style.innerHTML += `
 						@font-face {
 							font-family: ${fontId};
-							src: url("/assets/fonts/${category.id}/${font[0]}.ttf");
+							src: url("/fonts/${category.id}/${font[0]}.ttf");
 						}
 					`
 
