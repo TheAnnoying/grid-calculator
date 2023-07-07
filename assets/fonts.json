@@ -188,35 +188,43 @@
         "fonts": [
             [
                 "mc-eleven",
-                "MC Eleven"
+                "MC Eleven",
+                "4.5"
             ],
             [
                 "mc-nine",
-                "MC Nine"
+                "MC Nine",
+                "3.5"
             ],
             [
                 "mc-ten-alt",
-                "MC Ten Alt"
+                "MC Ten Alt",
+                "4"
             ],
             [
                 "mc-ten-fire",
-                "MC Ten Fire"
+                "MC Ten Fire",
+                "6.5"
             ],
             [
                 "mc-terra",
-                "MC Terra"
+                "MC Terra",
+                "4.3"
             ],
             [
                 "minecraft-bold-ten",
-                "Minecraft Bold Ten"
+                "Minecraft Bold Ten",
+                "4.3"
             ],
             [
                 "minecraft-thick-ten",
-                "Minecraft Thick Ten"
+                "Minecraft Thick Ten",
+                "3.5"
             ],
             [
                 "modified-mc-ten-drip",
-                "Modified MC Ten Drip"
+                "Modified MC Ten Drip",
+                "6"
             ]
         ]
     }
