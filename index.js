@@ -15,7 +15,7 @@ let selectedCategory = fonts[0].id;
 let selectedFont = fonts[0].fonts[0][0];
 
 function updateWidth() {
-	input.value = input.value.replace(/[^a-z]+/g, "");
+	input.value = input.value.replace(/[^a-zA-Z]+/g, "").toLowerCase();
 
 	let total = 0;
 	let spaces = 0;
