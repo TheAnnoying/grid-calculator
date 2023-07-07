@@ -125,10 +125,13 @@
 }
 
 .font {
-    @apply duration-100;
     padding: 5px 10px 10px;
     width: 200px;
-    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @apply duration-150;
 }
 
 .font:hover {
