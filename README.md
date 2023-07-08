@@ -14,6 +14,10 @@ An example of adding letter widths in widths.json:
     "fontid (e.g ten)": {
       "a (first number is for lowercase a and the second number is for uppercase a)": [5, 7],
       "b": [4, 7],
+    },
+    "anotherfondid (e.g five)": {
+      "a": [4, 6],
+      "b": [4, 5]
     }
   }
 }
