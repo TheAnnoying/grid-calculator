@@ -36,5 +36,7 @@ You can get font categories from assets/fonts.json, which is structured like thi
 ```
 
 ### How to run locally (for adding new features)
-In order to run this site locally you first need to clone the repo using: `git clone https://github.com/TheAnnoying/grid-calculator.git`. Enter the directory: `cd grid-calculator` and install dependencies with: `npm install`.
+In order to run this site locally you first need to clone the repo using: `git clone https://github.com/TheAnnoying/grid-calculator.git`.
+
+Enter the directory: `cd grid-calculator` and install dependencies with: `npm install`.
 Now to start the dev server run: `npm run dev`, the site should be live on `localhost:5173`.
