@@ -40,8 +40,6 @@ function updateWidth() {
 	totalElement.innerText = (total == 0 && spaces == 0) ? "0" : ((total + spaces)*parseInt(selectedGridSize) - 1).toString();
 }
 
-input.addEventListener("input", updateWidth);
-
 function showModal(title, content, func) {
 	let modalId = title.replace(/[^a-z]/g, "");
 	const dialog = document.createElement("dialog");
@@ -64,6 +62,27 @@ function showModal(title, content, func) {
 		func(modal, dialog);
 	}
 }
+
+function showToast(type, description) {
+	const toastParent = document.getElementById("toast");
+
+	const toast = document.createElement("div");
+	toast.classList.add("alert", "duration-75", "center-row", "rounded-none", "font-mcseven", "font-bold", "tracking-wide", "border-none", "text-center", "text-white", "outline-none", "text-lg", "highlight", "relative", `bg-${type}`);
+	toast.innerHTML = `<span>${description}</span>`;
+
+	if(toastParent.children.length <= 2) {
+		toastParent.appendChild(toast);
+		setTimeout(() => {
+			toast.classList.add("opacity-0").then(() => toastParent.removeChild(toast));
+		}, 3000);
+	};
+}
+
+input.addEventListener("input", updateWidth);
+totalElement.addEventListener("click", (e) => {
+	showToast("green-bg", "Copied to clipboard!");
+	navigator.clipboard.writeText(e.target.innerText);
+});
 
 fontChoiceButton.addEventListener("click", (e) => {
 	showModal("Choose font category",
@@ -101,12 +120,14 @@ fontChoiceButton.addEventListener("click", (e) => {
 				dialog.close();
 
 				showModal("Choose font", `
-					<div class="text-white gap-4 grid grid-cols-2 place-items-center font-select cursor-pointer">${category.fonts.map(e => `
+					<div class="text-white gap-4 grid grid-cols-2 place-items-center cursor-pointer">${category.fonts.map(e => `
 						<div class="font${selectedCategory === category.id && selectedFont === e[0] ? " selected" : ""} ${!widths?.[category.id]?.[e[0]] ? "disabled" : ""}" data-font="${e[0]}">
 							<div style="font-family:${category.id}-${e[0]}; font-size: ${e[2] + "rem" ?? "4rem"};">ABC</div>
 						</div>
 					`).join("")}</div>
-					<div class="modal-action gap-3">
+
+					<div class="modal-action gap-3 relative">
+						<p class="currentFontDisplay highlight bottom-[-25px] left-[-23px] absolute">...</p>
 						<button id="back" class="underline text-gray-400 text-xl font-mcseven">Back</button>
 						<button id="close" class="btn bg-green-bg text-white rounded-none font-mcfive tracking-widest highlight relative focus:outline-none border-none m-5">Close</button>
 					</div>
@@ -129,6 +150,7 @@ fontChoiceButton.addEventListener("click", (e) => {
 						evt.currentTarget.classList.add("font-selected");
 
 						fontChoiceButton.innerText = `Selected Font: ${category.name} - ${font[1]}`;
+						[...document.getElementsByClassName("currentFontDisplay")].forEach(e => e.innerText = selectedFont)
 						updateWidth();
 					}));
 				});
