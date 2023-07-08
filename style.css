@@ -56,10 +56,6 @@
     opacity: 0.4;
 }
 
-.font-select {
-    text-shadow: 0 5px 0px black;
-}
-
 #parent {
     @apply h-1/2;
     display: flex;
@@ -137,6 +133,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 0 5px 0px black;
     @apply duration-150;
 }
 
@@ -161,4 +158,22 @@
 .disabled {
     pointer-events: none;
     opacity: 50%;
+}
+
+.currentFontDisplay {
+    @apply bg-red-500;
+    @apply p-4;
+    font-family: mcfive;
+    font-weight: 700;
+}
+
+.currentFontDisplay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-right: 30px solid transparent;
+    @apply border-b-[56px];
+    @apply border-b-red-500;
+    @apply highlight;
 }
