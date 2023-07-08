@@ -61,27 +61,31 @@
 }
 
 #parent {
-    height: 100vh;
+    @apply h-1/2;
     display: flex;
     flex-direction: column;
-    @apply gap-16;
+    @apply gap-3;
+    @apply sm:gap-16;
     justify-content: center;
     align-items: center
+}
+
+@media only screen and (min-height: 700px) {
+    #parent {
+        @apply h-screen;
+    }
 }
 
 #title {
     user-select: none;
     display: flex;
     flex-direction: column;
-    @apply gap-3;
+    @apply gap-1;
+    @apply md:gap-3;
 }
 
 #title div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     @apply gap-4;
-    align-items: center;
     opacity: 0.5;
 }
 
