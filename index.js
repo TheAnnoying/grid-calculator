@@ -129,7 +129,7 @@ fontChoiceButton.addEventListener("click", (e) => {
 					<div class="modal-action gap-3 relative">
 						<p class="currentFontDisplay highlight bottom-[-25px] left-[-23px] absolute">...</p>
 						<button id="back" class="underline text-gray-400 text-xl font-mcseven">Back</button>
-						<button id="close" class="btn bg-green-bg text-white rounded-none font-mcfive tracking-widest highlight relative focus:outline-none border-none m-5">Close</button>
+						<button id="close" class="buttonTextShadow btn bg-green-bg text-white rounded-none font-mcfive tracking-widest highlight relative focus:outline-none border-none m-5">Close</button>
 					</div>
 				`, (modal2, dialog2) => {
 					modal2.querySelector("#back").addEventListener("click", () => {

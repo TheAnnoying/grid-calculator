@@ -177,3 +177,7 @@
     @apply border-b-red-500;
     @apply highlight;
 }
+
+.buttonTextShadow {
+    text-shadow: 0 3px 0px #00000070;
+}
