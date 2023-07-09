@@ -55,72 +55,72 @@
                 "4.5"
             ],
             [
-                "mctenaltlowercase",
+                "mc-ten-alt-lowercase",
                 "MC Ten Alt Lowercase",
                 "4"
             ],
             [
-                "mctendrip",
+                "mc-ten-drip",
                 "MC Ten Drip",
                 "5"
             ],
             [
-                "mctenelongatedalt",
+                "mc-ten-elongated-alt",
                 "MC Ten Elongated Alt",
                 "5"
             ],
             [
-                "mctenextend",
+                "mc-ten-extend",
                 "MC Ten Extend",
                 "3.75"
             ],
             [
-                "mctenicons",
+                "mc-ten-icons",
                 "MC Ten Icons",
                 "4"
             ],
             [
-                "mctenlowercasealt",
+                "mc-ten-lowercase-alt",
                 "MC Ten Lowercase Alt",
                 "5"
             ],
             [
-                "mctenoutline",
+                "mc-ten-outline",
                 "MC Ten Outline",
                 "6"
             ],
             [
-                "mctenround",
+                "mc-ten-round",
                 "MC Ten Round",
                 "5"
             ],
             [
-                "mctenrounddrip",
+                "mc-ten-round-drip",
                 "MC Ten Round Drip",
                 "5.4"
             ],
             [
-                "mctenserif",
+                "mc-ten-serif",
                 "MC Ten Serif",
                 "5"
             ],
             [
-                "mctenshifted",
+                "mc-ten-shifted",
                 "MC Ten Shifted",
                 "5.3"
             ],
             [
-                "mctenzigzag",
+                "mc-ten-zigzag",
                 "MC Ten ZigZag",
                 "5.4"
             ],
             [
-                "minecrafttenlowercase",
+                "minecraft-ten-lowercase",
                 "Minecraft Ten Lowercase",
                 "5"
             ],
             [
-                "minecrafttenserif",
+                "minecraft-ten-serif",
                 "Minecraft Ten Serif",
                 "4"
             ]
