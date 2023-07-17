@@ -24,7 +24,7 @@ function isUpperCase(letter) {
 }
 
 function updateWidth() {
-	input.value = input.value.replace(/[^a-zA-Z]+/g, "");
+	input.value = input.value.replace(/[^a-zA-Z{}]+/g, "");
 
 	let total = 0;
 	let spaces = 0;
