@@ -169,3 +169,26 @@ gridSizes.forEach(option => {
 		updateWidth();
 	});
 });
+
+document.getElementById("credits").addEventListener("click", () => {
+	showModal("", `
+		<div class="credits">
+			<h1 class="credits-heading">Poorly Built By:</h1>
+			<a href="https://theannoying.dev" target="_blank">TheAnnoying</a>
+			<p>main implementation</p>
+		</div>
+		<div class="credits">
+			<h1 class="credits-heading">A lot of help from:</h1>
+			<a href="https://ewanhowell.com" target="_blank">Ewan Howell</a>
+			<p>helped with modal handling and font lists</p>
+		</div>
+		<div class="credits">
+			<h1 class="credits-heading">Feedback over at:</h1>
+			<a href="https://discord.gg/titles", target="_blank">Minecraft Titles</a>
+			<p>gave feedback and ideas</p>
+		</div>
+		<div class="modal-action">
+			<button class="btn rounded-none font-mcfive tracking-widest highlight relative focus:outline-none border-none m-5">Close</button>
+		</div>
+	`)
+});
