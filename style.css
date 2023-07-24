@@ -23,16 +23,19 @@
 
 @font-face {
     font-family: mcfive;
+    font-display: swap;
     src: url("/fonts/minecraft/five.ttf");
 }
 
 @font-face {
     font-family: mcten;
+    font-display: swap;
     src: url("/fonts/minecraft/ten.ttf");
 }
 
 @font-face {
     font-family: mcseven;
+    font-display: swap;
     src: url("/fonts/minecraft/seven.ttf");
 }
 
@@ -180,4 +183,38 @@
 
 .buttonTextShadow {
     text-shadow: 0 3px 0px #00000070;
+}
+
+
+.credits {
+    @apply mb-10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.credits h1 {
+    text-align: center;
+    font-family: mcfive;
+    font-weight: bold;
+    text-shadow: 0 5px 0 black;
+    @apply text-2xl;
+    @apply mb-2;
+}
+
+.credits a {
+    text-align: center;
+    font-family: mcseven;
+    font-weight: bold;
+    @apply hover:underline;
+    @apply text-xl;
+}
+
+.credits p {
+    text-align: center;
+    font-family: mcseven;
+    color: gray;
+    font-style: italic;
+    @apply text-xl;
 }
