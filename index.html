@@ -10,6 +10,7 @@
 	<meta content="Calculate the correct grid size for your Minecraft styled Illustrator logos" property="og:description" />
 	<meta content="https://grid-calculator.theannoying.dev/favicon/favicon.png" property="og:image" />
 	<meta content="#3a87f3" data-react-helmet="true" name="theme-color" />
+	<meta name="theme-color" content="#3a87f3" />
 
 	<style></style>
 </head>
@@ -22,17 +23,17 @@
 	<div id="parent" style="display: none;">
 		<div id="title">
 			<div class="center-row">
-				<img loading="lazy" src="/illustrator.png" class="w-9 rounded-md" />
+				<img src="/illustrator.png" alt="Illustrator Logo" class="w-9 h-9 rounded-md" />
 				<p id="illustratorTitle">Illustrator Only</p>
 			</div>
-			<img loading="lazy" src="/grid_calculator.svg" class="w-[40rem]">
+			<img src="/grid_calculator.svg" alt="'Grid Calculator' - Minecraft styled text" class="w-[40rem] h-[69.03px]">
 		</div>
 		<div class="center-col">
 			<p class="text-2xl md:text-3xl text-center font-mcseven">Input your logo's text to see the correct grid width</p>
 			<input id="input" type="text" maxlength="55" spellcheck="false" placeholder="Enter text here" class="highlight font-mcseven tracking-wide text-xl input rounded-none bg-base-200 input-lg mt-5 w-96 md:w-full focus:outline-4 focus:outline-gray-400 border-none" />
 			<button id="font-choose" class="buttonTextShadow bg-green-bg text-white btn font-mcseven tracking-wide text-xl rounded-none btn-lg mt-4 w-96 md:w-full relative highlight focus:outline-none border-none grayscale normal-case">What font are you using?</button>
 
-			<div class="center-row gap-5 mb-16 mt-5 font-mcfive select-none">
+			<div class="center-row gap-5 mb-16 mt-7 font-mcfive select-none">
 				<p class="grid-size center-row size-selected">
 					<span class="text-2xl">x</span>
 					<span class="text-4xl">1</span>
@@ -50,7 +51,7 @@
 			<span id="total" class="buttonTextShadow select-none p-5 bg-green-bg text-white highlight relative font-bold text-4xl font-mcfive rounded-none border-none">0</span>
 		</div>
 
-		<span class="font-mcseven opacity-50 text-center">This site was poorly built by <a href="https://theannoying.dev" target="_blank" class="underline">TheAnnoying</a> and a few <a href="https://discord.gg/titles" target="_blank" class="underline">others</a></span>
+		<span class="font-mcseven opacity-50 text-center select-none" id="credits">Credits</span>
 	</div>
 	<script type="module" src="/index.js"></script>
 	<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "12f29146ab964e55a157d02f93b496b5"}'></script><!-- End Cloudflare Web Analytics -->
