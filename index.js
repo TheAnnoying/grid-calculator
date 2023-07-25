@@ -64,17 +64,34 @@ function showModal(title, content, func) {
 }
 
 function showToast(type, description) {
+	document.documentElement.classList.add("overflow-hidden")
 	const toastParent = document.getElementById("toast");
 
 	const toast = document.createElement("div");
 	toast.classList.add("alert", "duration-75", "center-row", "rounded-none", "font-mcseven", "font-bold", "tracking-wide", "border-none", "text-center", "text-white", "outline-none", "text-lg", "highlight", "relative", `bg-${type}`);
 	toast.innerHTML = `<span>${description}</span>`;
 
-	if(toastParent.children.length <= 2) {
+	if(toastParent.children.length === 0) {
 		toastParent.appendChild(toast);
 		setTimeout(() => {
-			toast.classList.add("opacity-0").then(() => toastParent.removeChild(toast));
+			toast.classList.add("opacity-0");
+			setTimeout(() => toastParent.removeChild(toast), 100);
 		}, 3000);
+	} else {
+		document.documentElement.animate([
+			{ transform: "translate(1px, 1px)" },
+			{ transform: "translate(-1px, -2px)" },
+			{ transform: "translate(-3px, 0px)" },
+			{ transform: "translate(3px, 2px)" },
+			{ transform: "translate(1px, -1px)" },
+			{ transform: "translate(-1px, 2px)" },
+			{ transform: "translate(-3px, 1px)" },
+			{ transform: "translate(3px, 1px)" },
+			{ transform: "translate(-1px, -1px)" },
+			{ transform: "translate(1px, 2px)" },
+			{ transform: "translate(1px, -2px)" }
+		], { duration: 200, iterations: 1 });
+		setTimeout(() => document.documentElement.classList.remove("overflow-hidden"), 200)
 	};
 }
 
