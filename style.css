@@ -164,6 +164,7 @@
 }
 
 .currentFontDisplay {
+    color: white;
     @apply bg-red-500;
     @apply p-4;
     font-family: mcfive;
@@ -192,6 +193,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .credits h1 {
