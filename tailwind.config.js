@@ -10,7 +10,16 @@ export default {
 			},
 			colors: {
 				"green-bg": "var(--green-bg)"
-			}
+			},
+			animation: {
+                "fade": 'fadeIn 0.6s'
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 100 }
+                }
+            }
 		}
 	},
 	daisyui: {
