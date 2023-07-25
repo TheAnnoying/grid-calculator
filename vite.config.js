@@ -6,15 +6,18 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			input: {
-				main: resolve(__dirname, 'index.html')
+				main: resolve(__dirname, "index.html"),
+				404: resolve(__dirname, "404.html")
 			},
 			output: {
-				entryFileNames: `assets/[name].js`,
-				assetFileNames: `assets/[name].[ext]`
+				entryFileNames: "assets/[name].js",
+				assetFileNames: "assets/[name].[ext]"
 			}
 		}
 	},
-	publicDir: 'assets',
+	publicDir: "assets",
+	cssMinify: "lightningcss",
+	appType: "custom",
 	plugins: [
 		topLevelAwait()
 	]
