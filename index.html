@@ -8,6 +8,7 @@
 
 	<meta content="Grid Calculator" property="og:title" />
 	<meta content="Calculate the correct grid size for your Minecraft styled Illustrator logos" property="og:description" />
+	<meta name="description" content="Calculate the correct grid size for your Minecraft styled Illustrator logos" />
 	<meta content="https://grid-calculator.theannoying.dev/favicon/favicon.png" property="og:image" />
 	<meta content="#3a87f3" data-react-helmet="true" name="theme-color" />
 	<meta name="theme-color" content="#3a87f3" />
@@ -15,9 +16,11 @@
 	<style></style>
 </head>
 <body>
-	<noscript>
-		<h1 style="font-family: sans-serif;">This site requires JavaScript</h1>
-		<p style="font-family: sans-serif;">Please get a browser that supports JavaScript, or <a href="https://support.google.com/adsense/answer/12654?hl=en" target="_blank">enable it on this site.</a></p>
+	<noscript style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+		<p style="font-family: sans-serif;">
+			<span style="font-size: 2em; font-weight: bolder;">This site requires JavaScript</span><br><br>
+			Please get a browser that supports JavaScript, or <a href="https://support.google.com/adsense/answer/12654?hl=en" target="_blank">enable it on this site.</a>
+		</p>
 	</noscript>
 	<div id="toast" class="toast toast-center center-col"></div>
 	<div id="parent" style="display: none;">
@@ -26,7 +29,7 @@
 				<img src="/illustrator.png" alt="Illustrator Logo" class="w-9 h-9 rounded-md" />
 				<p id="illustratorTitle">Illustrator Only</p>
 			</div>
-			<img src="/grid_calculator.svg" alt="'Grid Calculator' - Minecraft styled text" class="w-[40rem] h-[69.03px]">
+			<img src="/grid_calculator.svg" alt="'Grid Calculator' - Minecraft styled text" class="w-[40rem] h-[4.4rem]">
 		</div>
 		<div class="center-col">
 			<p class="text-2xl md:text-3xl text-center font-mcseven">Input your logo's text to see the correct grid width</p>
@@ -50,8 +53,7 @@
 
 			<span id="total" class="buttonTextShadow select-none p-5 bg-green-bg text-white highlight relative font-bold text-4xl font-mcfive rounded-none border-none">0</span>
 		</div>
-
-		<span class="font-mcseven opacity-50 text-center select-none" id="credits">Credits</span>
+		<span class="font-mcseven opacity-50 text-center select-none underline text-lg" id="credits">Credits</span>
 	</div>
 	<script type="module" src="/index.js"></script>
 	<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "12f29146ab964e55a157d02f93b496b5"}'></script><!-- End Cloudflare Web Analytics -->
