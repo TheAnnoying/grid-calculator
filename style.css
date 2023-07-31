@@ -5,6 +5,14 @@
 :root {
     --green-bg: #3B8526;
     color-scheme: dark;
+    background-image: linear-gradient(#2d303a,#353946,#353946,#353946,#353946,#353a49,#363c53,#3a4964);
+}
+
+#dust {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .center-row {
@@ -37,6 +45,26 @@
     font-family: mcseven;
     font-display: swap;
     src: url("/fonts/minecraft/seven.ttf");
+}
+
+#link {
+    opacity: 0;
+    @apply toast;
+    @apply hover:scale-105;
+    @apply duration-75;
+}
+
+#link a {
+    color: white;
+    border-radius: 0px;
+    border-style: none;
+    font-family: mcseven;
+    font-weight: 700;
+    @apply tracking-wide;
+    @apply center-row;
+    @apply bg-green-bg;
+    @apply grayscale;
+    @apply gap-2;
 }
 
 .card.image-full:before {
@@ -84,6 +112,7 @@
 }
 
 #title div {
+    @apply mt-5;
     @apply gap-4;
     opacity: 0.5;
 }
@@ -184,6 +213,7 @@
 
 .buttonTextShadow {
     text-shadow: 0 3px 0px #00000070;
+    box-shadow: 0 3px 0px #00000070;
 }
 
 
