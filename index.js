@@ -23,6 +23,8 @@ function isUpperCase(letter) {
 	return (letter.toUpperCase() === letter ? true : false);
 }
 
+if(window.self !== window.top) document.getElementById("link").style.setProperty("opacity", "1");
+
 function updateWidth() {
 	input.value = input.value.replace(/[^a-zA-Z{}]+/g, "");
 
@@ -63,7 +65,7 @@ function showModal(title, content, func) {
 	}
 }
 
-function showToast(type, description) {
+function showToast(type, description, timeout) {
 	document.documentElement.classList.add("overflow-hidden")
 	const toastParent = document.getElementById("toast");
 
@@ -76,7 +78,7 @@ function showToast(type, description) {
 		setTimeout(() => {
 			toast.classList.add("opacity-0");
 			setTimeout(() => toastParent.removeChild(toast), 100);
-		}, 3000);
+		}, timeout ?? 3000);
 	} else {
 		document.documentElement.animate([
 			{ transform: "translate(1px, 1px)" },
@@ -91,7 +93,7 @@ function showToast(type, description) {
 			{ transform: "translate(1px, 2px)" },
 			{ transform: "translate(1px, -2px)" }
 		], { duration: 200, iterations: 1 });
-		setTimeout(() => document.documentElement.classList.remove("overflow-hidden"), 200)
+		setTimeout(() => document.documentElement.classList.remove("overflow-hidden"), 250)
 	};
 }
 
