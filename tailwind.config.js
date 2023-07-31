@@ -23,6 +23,7 @@ export default {
 		}
 	},
 	daisyui: {
+		base: false,
 		themes: [
 			{
 				brose: {
@@ -30,7 +31,7 @@ export default {
 					"secondary": "#8f4263",
 					"accent": "#5c7f67",
 					"neutral": "#181818",
-					"base-100": "#2c303a",
+					"base-100": "#3c4250",
 					"info": "#3abff8",
 					"success": "#36d399",
 					"warning": "#fbbd23",
