@@ -1,8 +1,20 @@
 import "./style.css";
 import "./particles.js";
+const urlParams = new URLSearchParams(window.location.search);
 
 //If javascript was not loaded, the site won't load
-document.getElementById("parent").style.setProperty("display", "flex")
+document.getElementById("parent").style.setProperty("display", "flex");
+
+let whatFontsToLoad;
+if (!urlParams.has("minecrafttitles")) {
+	whatFontsToLoad = "minecraft";
+	document.getElementById("dust").remove();
+} else {
+	whatFontsToLoad = "brose";
+	document.documentElement.style.setProperty("background-image", "linear-gradient(#2d303a,#353946,#353946,#353946,#353946,#353a49,#363c53,#3a4964)");
+}
+
+import(`./customstyles/${whatFontsToLoad}.css`);
 
 const input = document.getElementById("input");
 const fontChoiceButton = document.getElementById("font-choose");
@@ -46,7 +58,6 @@ function updateWidth() {
 function showModal(title, content, func) {
 	let modalId = title.replace(/[^A-Za-z]/g, "").toLowerCase();
 	
-	if(document.getElementById(modalId)) return document.getElementById(modalId).showModal();
 	const dialog = document.createElement("dialog");
 	dialog.classList.add("modal", "modal-bottom", "sm:modal-middle");
 	dialog.setAttribute("id", modalId);
