@@ -5,7 +5,6 @@
 :root {
     --green-bg: #3B8526;
     color-scheme: dark;
-    background-image: linear-gradient(#2d303a,#353946,#353946,#353946,#353946,#353a49,#363c53,#3a4964);
 }
 
 #dust {
@@ -25,24 +24,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-@font-face {
-    font-family: mcfive;
-    font-display: swap;
-    src: url("/fonts/minecraft/five.ttf");
-}
-
-@font-face {
-    font-family: mcten;
-    font-display: swap;
-    src: url("/fonts/minecraft/ten.ttf");
-}
-
-@font-face {
-    font-family: mcseven;
-    font-display: swap;
-    src: url("/fonts/minecraft/seven.ttf");
 }
 
 #link {
