@@ -1,4 +1,5 @@
 import "./style.css";
+import "./particles.js";
 
 //If javascript was not loaded, the site won't load
 document.getElementById("parent").style.setProperty("display", "flex")
@@ -43,7 +44,9 @@ function updateWidth() {
 }
 
 function showModal(title, content, func) {
-	let modalId = title.replace(/[^a-z]/g, "");
+	let modalId = title.replace(/[^A-Za-z]/g, "").toLowerCase();
+	
+	if(document.getElementById(modalId)) return document.getElementById(modalId).showModal();
 	const dialog = document.createElement("dialog");
 	dialog.classList.add("modal", "modal-bottom", "sm:modal-middle");
 	dialog.setAttribute("id", modalId);
