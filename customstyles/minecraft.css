@@ -19,3 +19,9 @@
     font-display: swap;
     src: url("/fonts/minecraft/seven.ttf");
 }
+
+@font-face {
+    font-family: mctenimportant;
+    font-display: swap;
+    src: url("/fonts/minecraft/seven.ttf");
+}

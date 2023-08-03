@@ -6,7 +6,8 @@ export default {
 			fontFamily: {
 				"mcfive": ["mcfive", "sans-serif"],
 				"mcten": ["mcten", "sans-serif"],
-				"mcseven": ["mcseven", "sans-serif"]
+				"mcseven": ["mcseven", "sans-serif"],
+				"mctenimportant": ["mctenimportant", "sans-serif"]
 			},
 			colors: {
 				"green-bg": "var(--green-bg)"

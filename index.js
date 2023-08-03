@@ -18,6 +18,7 @@ if (!urlParams.has("minecrafttitles")) {
 		</div>
 	`;
 
+	document.getElementById("font-choose").classList.add("font-normal");
 	document.documentElement.style.setProperty("background-image", "linear-gradient(#2d303a,#353946,#353946,#353946,#353946,#353a49,#363c53,#3a4964)");
 }
 
