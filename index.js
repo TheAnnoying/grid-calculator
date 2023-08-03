@@ -11,6 +11,13 @@ if (!urlParams.has("minecrafttitles")) {
 	document.getElementById("dust").remove();
 } else {
 	whatFontsToLoad = "brose";
+
+	document.getElementById("parent").innerHTML += `
+		<div id="link" class="buttonTextShadow">
+			<a href="${window.location.origin}" target="_blank" class="alert highlight"><img src="/arrowup.svg" class="h-5 w-5 buttonTextShadow">Open</a>
+		</div>
+	`;
+
 	document.documentElement.style.setProperty("background-image", "linear-gradient(#2d303a,#353946,#353946,#353946,#353946,#353a49,#363c53,#3a4964)");
 }
 
@@ -35,8 +42,6 @@ function isUpperCase(letter) {
 
 	return (letter.toUpperCase() === letter ? true : false);
 }
-
-if(window.self !== window.top) document.getElementById("link").style.setProperty("opacity", "1");
 
 function updateWidth() {
 	input.value = input.value.replace(/[^a-zA-Z{}]+/g, "");

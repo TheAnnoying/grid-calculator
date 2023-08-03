@@ -27,7 +27,6 @@
 }
 
 #link {
-    opacity: 0;
     @apply toast;
     @apply hover:scale-105;
     @apply duration-75;
