@@ -22,6 +22,7 @@ export default {
             }
 		}
 	},
+	plugins: [require("daisyui")],
 	daisyui: {
 		base: false,
 		themes: [
@@ -30,7 +31,7 @@ export default {
 					"primary": "#148295",
 					"secondary": "#8f4263",
 					"accent": "#5c7f67",
-					"neutral": "#181818",
+					"neutral": "#2c2e3a",
 					"base-100": "#3c4250",
 					"info": "#3abff8",
 					"success": "#36d399",
@@ -40,5 +41,4 @@ export default {
 			},
 		],
 	},
-	plugins: [require("daisyui")],
 }
