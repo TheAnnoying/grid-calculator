@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: mcfive;
+    font-display: swap;
+    src: url("/fonts/minecraft/five.ttf");
+}
+
+@font-face {
+    font-family: mcten;
+    font-display: swap;
+    src: url("/fonts/minecraft/ten.ttf");
+}
+
+@font-face {
+    font-family: mcseven;
+    font-display: swap;
+    src: url("/fonts/minecraft/seven.ttf");
+}
