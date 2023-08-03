@@ -1,19 +1,19 @@
-const dustCanvas=document.getElementById("dust");
+const dustCanvas = document.getElementById("dust");
 
 let previousTimeStamp;
-let particles=[];
+let particles = [];
 
-const MIN_SIZE=2;            // pixels
-const MAX_SIZE=10;
+const MIN_SIZE = 2;            // pixels
+const MAX_SIZE = 10;
 
-const MIN_XVEL=-0.03;
-const MAX_XVEL=0.07;
+const MIN_XVEL = -0.03;
+const MAX_XVEL = 0.07;
 
-const MIN_YVEL=-0.0;
-const MAX_YVEL=0.13;
+const MIN_YVEL = -0.0;
+const MAX_YVEL = 0.13;
 
-const MIN_ALPHA=.0;            // 0 < x < 1
-const MAX_ALPHA=.2;
+const MIN_ALPHA = .0;            // 0 < x < 1
+const MAX_ALPHA = .2;
 
 const PARTICLES_PER_PIXEL = 0.1;
 
@@ -49,19 +49,19 @@ function createParticles(amount, defaultObj={}){for (let i = 0; i < amount; i++)
 const isInBounds = particle => particle.X < dustCanvas.width && particle.Y > 0 && particle.X > 0 && particle.Y < dustCanvas.height;
 
 function renderCanvas(timeStamp) {
-    let dt=timeStamp-previousTimeStamp;
+    let dt = timeStamp - previousTimeStamp;
     if (previousTimeStamp === undefined){
-        previousTimeStamp=timeStamp;
+        previousTimeStamp = timeStamp;
         window.requestAnimationFrame(renderCanvas);
         return;
     }
 
-    const ctx = dustCanvas.getContext('2d');
+    const ctx = dustCanvas.getContext("2d");
     ctx.clearRect(0, 0, dustCanvas.width, dustCanvas.height);
 
-    let oldParticleLen = particles.filter(p=>!p.mouseMade).length;
+    let oldParticleLen = particles.filter(p => !p.mouseMade).length;
 
-    particles=particles.map(particle=>{
+    particles=particles.map(particle => {
         particle.X += ( particle.fadeVelX + particle.velX ) * dt;
         particle.fadeVelX -= particle.fadeVelX * MOUSE_VEL_FADE_SPEED * dt;
         particle.Y += ( particle.fadeVelY + particle.velY ) * dt;
@@ -69,7 +69,7 @@ function renderCanvas(timeStamp) {
         return particle;
     }).filter(isInBounds);
 
-    createParticles(oldParticleLen-particles.filter(p=>!p.mouseMade).length);
+    createParticles(oldParticleLen - particles.filter(p=> !p.mouseMade).length);
 
     particles.forEach(particle=>{
         ctx.fillStyle = `rgba(${PARTICLE_R}, ${PARTICLE_G}, ${PARTICLE_B}, ${particle.alpha})`;
@@ -86,26 +86,32 @@ function resizeCanvas(){
 }
 
 
-function makeParticlesScaredOfPoint(x,y){particles.forEach(p=>{
-    let dist = Math.sqrt((p.X - x)**2 + (p.Y - y)**2);
+function makeParticlesScaredOfPoint(x,y){
+    particles.forEach(p => {
+        let dist = Math.sqrt((p.X - x) ** 2 + (p.Y - y) ** 2);
 
-    let dirX = (p.X - x)/dist;
-    let dirY = (p.Y - y)/dist;
+        let dirX = (p.X - x)/dist;
+        let dirY = (p.Y - y)/dist;
 
-    p.fadeVelX = HOW_SCARED_PARTICLES_ARE_OF_THE_MOUSE*(1/dist)*dirX;
-    p.fadeVelY = HOW_SCARED_PARTICLES_ARE_OF_THE_MOUSE*(1/dist)*dirY;
-}); }
+        p.fadeVelX = HOW_SCARED_PARTICLES_ARE_OF_THE_MOUSE*(1/dist)*dirX;
+        p.fadeVelY = HOW_SCARED_PARTICLES_ARE_OF_THE_MOUSE*(1/dist)*dirY;
+    });
+}
 
-if (dustCanvas !== null) {addEventListener("load", ()=>{
-    window.addEventListener("resize",resizeCanvas);
-    resizeCanvas();
-    for (let i = 0; i < PARTICLES_PER_PIXEL*dustCanvas.height; i++)
-    {createParticle({X: dustCanvas.width * Math.random(), Y: dustCanvas.height * Math.random()})}
-    window.requestAnimationFrame(renderCanvas);
+if (dustCanvas !== null) {
+    window.addEventListener("load", () => {
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
+        for (let i = 0; i < PARTICLES_PER_PIXEL * dustCanvas.height; i++) {
+            createParticle({ X: dustCanvas.width * Math.random(), Y: dustCanvas.height * Math.random() });
+        }
+
+        window.requestAnimationFrame(renderCanvas);
     
 
-    document.addEventListener("mousemove", e=>makeParticlesScaredOfPoint(e.pageX,e.pageY));
-    document.addEventListener("touchmove", e=>makeParticlesScaredOfPoint(e.changedTouches[0].pageX, e.changedTouches[0].pageY));
+        document.addEventListener("mousemove", e => makeParticlesScaredOfPoint(e.pageX,e.pageY));
+        document.addEventListener("touchmove", e => makeParticlesScaredOfPoint(e.changedTouches[0].pageX, e.changedTouches[0].pageY));
 
-    document.addEventListener("mousedown", e=>createParticles(CLICK_AMOUNT,{X:e.pageX,Y:e.pageY, mouseMade:true, both: true}));
-});}
+        document.addEventListener("mousedown", e => createParticles(CLICK_AMOUNT, {X:e.pageX,Y:e.pageY, mouseMade:true, both: true} ));
+    });
+}
