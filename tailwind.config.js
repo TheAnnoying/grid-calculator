@@ -24,7 +24,6 @@ export default {
 	},
 	plugins: [require("daisyui")],
 	daisyui: {
-		base: false,
 		themes: [
 			{
 				brose: {
