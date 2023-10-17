@@ -1,3 +1,6 @@
+> **Warning**
+> This project is no longer maintained. Visit the rewrite [here](https://github.com/TheAnnoying/grid-calculator-v2)
+
 # Grid Calculator
 This website helps Minecraft logo makers that use Illustrator to calculate the correct grid width for their logo.
 Input your text (uppercase/lowercase may matter) and select the font you use in your logo, the grid's width should be shown in the green box.
